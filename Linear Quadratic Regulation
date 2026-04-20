@@ -7,3 +7,4 @@ import control as ct
 # define system parameters
 m = 1
 b = 0.5
+k = 1
