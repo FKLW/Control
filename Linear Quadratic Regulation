@@ -1,1 +1,9 @@
+import numpy as np
+import scipy as sp
+import quadprog
+import matplotlib.pyplot as plt
+import control as ct
 
+# define system parameters
+m = 1
+b = 0.5
