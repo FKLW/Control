@@ -7,4 +7,10 @@ import control as ct
 # define system parameters
 m = 1      # mass of the brick
 b = 0.5    # damping coefficient
-k = 1
+k = 1      # spring coefficient
+
+# define the continue system
+A = np.array([[0, 1],
+              [-k/m, -b/m]])
+n = len(A)
+B = np.array()
