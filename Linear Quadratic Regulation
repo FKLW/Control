@@ -21,3 +21,17 @@ C = np.eye(A.shape[0])
 D = np.zeros((A.shape[0], B.shape[1]))
 sys_c = ct.ss(A, B, C, D)      # establish the continue system
 # --------------------------------------------------------
+
+# ----------------acquire the discrete system----------------
+Ts = 0.1      # time interval
+sys_d = ct.c2d(sys_c, Ts, method='zoh')      # 'zoh' zero-order holding
+A = sys_d.A    # get the state matrix A for the discrete system
+B = sys_d.B    # get the state matrix B for the discrete system
+
+
+
+
+
+
+
+
