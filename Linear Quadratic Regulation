@@ -5,6 +5,6 @@ import matplotlib.pyplot as plt
 import control as ct
 
 # define system parameters
-m = 1
-b = 0.5
+m = 1      # mass of the brick
+b = 0.5    # damping coefficient
 k = 1
