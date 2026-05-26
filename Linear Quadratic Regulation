@@ -4,18 +4,20 @@ import quadprog
 import matplotlib.pyplot as plt
 import control as ct
 
-# define system parameters
+# ----------------define system parameters----------------
 m = 1      # mass of the brick
 b = 0.5    # damping coefficient
 k = 1      # spring coefficient
+# --------------------------------------------------------
 
-# define the continue system
+# ----------------define the continue system----------------
 A = np.array([[0, 1],          # define state matrix A, n*n
               [-k/m, -b/m]])
 n = len(A)                     # get the size of the first dimension
-B = np.array([[0],             # 
+B = np.array([[0],             # define control matrix B, n*n
               [1/m]])
-p = len(B[0])
+p = len(B[0])                  # get the size of the first dimension
 C = np.eye(A.shape[0])
 D = np.zeros((A.shape[0], B.shape[1]))
-sys_c = ct.ss(A, B, C, D)
+sys_c = ct.ss(A, B, C, D)      # establish the continue system
+# --------------------------------------------------------
