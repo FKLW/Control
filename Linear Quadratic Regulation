@@ -46,7 +46,7 @@ Q =  np.array([[1, 0],
                [0, 1]])
 R =  np.array([[0.1]])
 
-
+AD = ct.c2d(ct.ss(np.array([[0, 1], [0, 0]]), np.array([[0], [0]]), C, D), Ts, method = 'zoh').A
 
 
 
